@@ -1,13 +1,10 @@
 <p align="center">
-    <h1 align="center">Color Shift Estimation-and-Correction for Image Enhancement</h1>
+    <h1 align="center">CycleGAN and Diffusion-Based Joint Correction for Over- and Under-Exposed
+Images</h1>
     <p align="center">
-        <a href="https://yiyulics.github.io/">Yiyu Li</a>
+        <a href="https://yiyulics.github.io/">Bright Prika</a>
         ·
-        <a href="https://kkbless.github.io/">Ke Xu</a>
-        ·
-        <a href="https://scholars.cityu.edu.hk/en/persons/gerhard-petrus-hancke(9e59c8eb-ba32-4075-97f7-e44e82367742).html">Gerhard Petrus Hancke</a>
-        ·
-        <a href="https://www.cs.cityu.edu.hk/~rynson/">Rynson W.H. Lau</a>
+
     </p>
 </p>
 
@@ -27,31 +24,22 @@
 
 
 
-**Abstract**: Images captured under sub-optimal illumination conditions may contain both over- and under-exposures.
-Current approaches mainly focus on adjusting image brightness, which may exacerbate color tone distortion in under-exposed areas and fail to restore accurate colors in over-exposed regions.
-We observe that over- and over-exposed regions display opposite color tone distribution shifts, which may not be easily normalized in joint modeling as they usually do not have "normal-exposed" regions/pixels as reference.
-In this paper, we propose a novel method to enhance images with both over- and under-exposures by learning to estimate and correct such color shifts.
-Specifically, we first derive the color feature maps of the brightened and darkened versions of the input image via a UNet-based network, followed by a pseudo-normal feature generator to produce pseudo-normal color feature maps.
-We then propose a novel COlor Shift Estimation (COSE) module to estimate the color shifts between the derived brightened (or darkened) color feature maps and the pseudo-normal color feature maps.
-The COSE module corrects the estimated color shifts of the over- and under-exposed regions separately.
-We further propose a novel COlor MOdulation (COMO) module to modulate the separately corrected colors in the over- and under-exposed regions to produce the enhanced image.
-Comprehensive experiments show that our method outperforms existing approaches.
+**Abstract**: Real-world images often suffer from both over- and under-exposure, leading to color distortions and loss of detail. While existing methods address these issues separately, they struggle with scenes exhibiting simultaneous over- and under-exposed regions. Inspired by the success of CycleGAN and Diffusion Models in image-to-image translation and generative tasks, we propose a novel framework that leverages these techniques to correct exposure and color shifts. Our approach integrates a CycleGAN-inspired architecture to model bidirectional mappings between poorly exposed and well-exposed images, ensuring cycle consistency for robust enhancement. Additionally, we employ a Diffusion Model to iteratively refine the generated pseudo-normal features, capturing complex color distributions and mitigating artifacts. The proposed method consists of two key modules: a **Color Shift Estimation (COSE) module, which uses deformable convolutions extended to the color space to estimate and correct exposure-specific shifts, and a Color Modulation (COMO) module, which employs cross-attention to harmonize the enhanced regions. Extensive experiments demonstrate that our method outperforms state-of-the-art approaches on benchmark datasets, achieving superior visual quality with fewer parameters. The integration of CycleGAN’s adversarial training and the Diffusion Model’s iterative refinement enables our framework to handle extreme exposure conditions effectively, even in the absence of reference normal-exposed pixels. Limitations arise in cases of fully saturated regions, suggesting future directions for incorporating generative priors to further improve robustness.
 
 
 ## :mega: News
-- [2024/04/18] Update Google Drive link for the paper and README.
-- [2024/09/08] Release training and testing code, and model weights. Update paper link to arXiv and CVF Open Access version. Update README documentation.
-- [2024/11/11] Add environment yaml file.
+- [2025/04/23] Update Google Drive link for the paper and README.
+- [2025/04/23] Add environment yaml file.
 
 
 ## :wrench: Installation
 To get started, clone this project, create a conda virtual environment using Python 3.9 (or higher versions may do as well), and install the requirements:
 ```
-git clone https://github.com/yiyulics/CSEC.git
-cd CSEC
+git clone https://github.com/BrightPrika/CDC.git
+cd CDC
 
-conda create -n csec python=3.9
-conda activate csec
+conda create -n cdc python=3.9
+conda activate cdc
 
 # Change the following line to match your environment
 # Refer to https://pytorch.org/get-started/previous-versions/#v1121
