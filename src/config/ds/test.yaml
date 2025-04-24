@@ -1,0 +1,7 @@
+# @package ds
+class: img_dataset
+name: lcdp_data.test
+input:
+    - D:/KNUST IT BOOKS/MIT 563 COMPUTER VISION AND IMAGES PROCESSING/My Project/CSEC-main/CSEC-main/src/data/lcdp_dataset-001/test-input/*
+GT:
+    - none
