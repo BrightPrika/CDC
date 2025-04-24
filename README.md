@@ -3,9 +3,6 @@
 Images</h1>
     <p align="center">
         <a href="https://yiyulics.github.io/">Bright Prika</a>
-        ·
-
-    </p>
 </p>
 
 <div align="center">
