@@ -9,3 +9,4 @@ Pillow
 PyYAML
 scikit-image
 wandb
+torch
