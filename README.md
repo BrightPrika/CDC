@@ -79,17 +79,9 @@ You may need to reduce the batch size in `src/config/config.yaml` to avoid out o
 
 
 
-## :postbox: Citation
-If you find our work helpful, please cite our paper as:
+
 ```
-@inproceedings{li_2024_cvpr_csec,
-    title       =   {Color Shift Estimation-and-Correction for Image Enhancement},
-    author      =   {Yiyu Li and Ke Xu and Gerhard Petrus Hancke and Rynson W.H. Lau},
-    booktitle   =   {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    year        =   {2024}
-}
-```
-Should you have any questions, feel free to post an issue or contact me at [yiyuli.cs@my.cityu.edu.hk](mailto:yiyuli.cs@my.cityu.edu.hk).
+Should you have any questions, feel free to post an issue or contact me at [bprika@st.knust.edu.gh).
 
 
 ## :sparkles: Acknowledgements
